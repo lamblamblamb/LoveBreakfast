@@ -1,7 +1,25 @@
 <template>
-  <view class="container">
-    登录
+<view class="container">
+  <form bindsubmit="formSubmit">
+    <view class="section">
+      <image class="icon" src='/images/phone.png'></image>
+      <view class="section_title">手机号 :</view>
+      <input class="phone" name="phone" type="number" bindinput="phoneInput" placeholder="请输入手机号码" maxlength="11" focus="true" />
+    </view>
+    <view class="section">
+      <image class="icon" src='/images/password.png'></image>
+      <view class="section_title">密码 :</view>
+      <input class="code" name="code" type="number" placeholder="请输入密码" />
+    </view>
+    <view class="btn_confirm">
+      <button class="button" formType="submit">登录</button>
+    </view>
+  </form>
+  <view class="others">
+    <button class="btn authorize">微信授权</button>
+    <button class="btn register">注册</button>
   </view>
+</view>
 </template>
 <script >
   import wepy from 'wepy';
@@ -17,4 +35,55 @@
   }
 </script>
 <style scoped lang="less" rel="stylesheet/less">
+@import "../styles/common.less";
+.container {
+  width: 100%;
+  font-family:"Microsoft Yahei";
+}
+.section {
+  margin: 80rpx 40rpx;
+  display: flex;
+  align-items: center;
+  padding: 20rpx 30rpx;
+  border-bottom: 1px solid #dbdbdb;
+  background: #fff;
+  width: 550rpx;
+  .icon {
+    width: 50rpx;
+    height: 50rpx;
+    padding-right: 30rpx;
+  }
+  .section_title {
+    color: #1a1a1a;
+    width: 160rpx;
+    font-size: 36rpx;
+  }
+  .phone {
+    color: @grey-900;
+    font-size: 30rpx;
+  }
+  .code {
+    color: @grey-900;
+    font-size: 30rpx;
+  }
+}
+.btn_confirm {
+  margin-top: 64rpx;
+  padding: 0 24rpx;
+  border-radius: 100px;
+}
+.button {
+  background-color: #bbdbf4;
+  color: #ffffff;
+}
+.btn {
+  border: 1px solid #fff;
+  width: 250rpx;
+  height: 100rpx;
+  font-size: 35rpx;
+  margin: 80rpx 35rpx;
+  display: inline-block;
+  justify-content: space-around;
+  color: #bbdbf4;
+}
 </style>

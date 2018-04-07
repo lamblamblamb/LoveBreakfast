@@ -1,7 +1,7 @@
 import wepy from 'wepy';
 import util from './util';
 import md5 from './md5';
-import tip from './tip'
+import tip from './tip';
 
 const API_SECRET_KEY = 'www.mall.cycle.com'
 const TIMESTAMP = util.getCurrentTime()

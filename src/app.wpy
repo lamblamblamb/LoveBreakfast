@@ -1,4 +1,5 @@
 <style scoped lang="less" rel="stylesheet/less">
+@import "./styles/common";
 
 .container {
   height: 100%;

@@ -1,4 +1,4 @@
-import {wxRequest} from '../utils/wxRequest';
+import { wxRequest } from '../utils/wxRequest';
 //接口前缀
 const _title = '';
 //定义接口
